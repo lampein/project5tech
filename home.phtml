@@ -1,0 +1,29 @@
+<div class="home-container">
+	<section>
+		<div class='controll'>
+            <i class="fas fa-backward fa-heart"></i>
+            <i class="fas fa-forward fa-heart"></i>
+	    </div>
+	    <?php foreach ($destinations as $destination): ?>
+		<div class='slider'>
+			<img src="img/<?= htmlspecialchars($destination['slider']) ?>">
+		</div>
+		<?php endforeach ?>
+	</section>
+	<div class="style">
+		<h2>Choisissez les vacances qui vous caractérisent!</h2>
+	</div>
+	<section>
+	<div class="row">
+			<?php foreach ($categories as $category): ?>
+				<div class="col-lg-3 col-sm-6">
+					<section>
+						<img src="img/<?= htmlspecialchars($category['picture']) ?>" alt="img">
+						<a href="category.php?id=<?= htmlspecialchars($category['ID']) ?>"><h2>- <?= htmlspecialchars($category['title']) ?> -</h2></a>
+						
+					</section>
+				</div>	
+			<?php endforeach ?>
+	</div>
+	</section>
+</div>

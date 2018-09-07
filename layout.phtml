@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="main9.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="normalize.css">
+	<title>Travel it's for us...</title>
+</head>
+<body>
+	<div class="bd-container">
+		<header>
+			<div class="container">
+				<nav>
+					<img src="img/travel3.png" alt="travel">
+					<h1>#voyager = #aimer</h1>
+					<ul>
+						<li><a href="home.php">Accueil</a></li>
+						<li><a href="destinations.php">Destinations</a></li>
+						<li><a href="about.php">Qui sommes-nous?</a></li>
+						<li><a href="contact.php">Contact</a></li>
+					</ul>
+				</nav>
+				<!-- <?php var_dump(session_status()); ?> -->
+				<!-- <?php var_dump(isset($_SESSION['user'])); ?> -->
+				<ul class='user'>
+			   	<?php if (isset($_SESSION['user'])) : ?>
+					<li><p>Salut <b><?php echo $_SESSION['user']['firstName'] ?> !</b></p></li>
+					<!-- <?php var_dump(($_SESSION['user'])); ?> -->
+					<li><a href="logout.php">Déconnexion</a></li>
+			   	<?php else : ?>
+			   		<li><a href="register.php">Nous rejoindre</a></li>
+			   		<li><a href="userconnect.php">Se connecter</a></li>
+			   		
+			    <?php endif ?>
+				</ul>
+			</div>
+		</header>
+		<div class="container">
+			<main>
+				<?php include $template . '.phtml' ?>
+			</main>
+		
+			<footer>
+				
+			</footer>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<p>&copy; Olimpia Sacareanu 2018. For more information: <a href="mailto:olimpiasacareanu@yahoo.com">olimpiasacareanu@yahoo.com</a><p>
+		</div>
+	</footer>
+	
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous">
+	</script>
+	<script src='main.js'></script>
+	<script src='slider.js'></script>
+	<script src='order.js'></script>
+</body>
+</html>

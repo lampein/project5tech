@@ -1,0 +1,47 @@
+<div class="destination-container">
+	
+	<article>
+		<div class="row">
+			<div class="col-lg-6 col-sm-12">
+				<img src="img/<?= $destination['picture'] ?>" alt="destination">
+			</div>
+			<div class="col-lg-6 col-sm-12">
+				<h1><?= htmlspecialchars($destination['title']) ?></h1>
+				<p><i class="fas fa-heart"></i> <?= htmlspecialchars($destination['description']) ?></p>
+			</div>
+		</div>
+			<a  class='conditions' href='#'>CONDITIONS</a>
+				<p id='id' style="display: none"><?= htmlspecialchars($conditions['ID']) ?></p>
+				<div class= 'condition'>
+					<ul class='hidden'>
+						<li><b>Situation: </b><?= htmlspecialchars($conditions['content']) ?></li>
+						<li><b>Prix: </b><?= htmlspecialchars($conditions['price']) ?> euro </li>
+						<li><b>Durée: </b><span class='period'><?=htmlspecialchars($conditions['period']) ?></span></li>
+						<li><b>Inclus: </b><?= htmlspecialchars($conditions['include']) ?></li>
+						<li><b>Non inclus: </b><?= htmlspecialchars($conditions['notInclude']) ?></li>
+					</ul>
+				</div>
+				<form action="" method='post'>
+					<label for="persons">Combien de personnes?</label>
+					<select name="persons" id="persons">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+					<button type="button" id='join' >Participer</button>
+				</form>
+				<form class="order" data-mode='change' >
+						<div class="join">
+						
+						</div>
+						
+						<button style="display: none;" type="button" id="confirm">Confirmer</button>
+						<button style="display: none;" type="button" id="cancel">Annuler</button>
+						<input type="hidden" name="destinationID" value="<?= $destination['ID'] ?>">
+				</form>
+		
+	</article>
+</div>
+

@@ -1,0 +1,58 @@
+<div class="register">
+	<p><?php if(isset($message)){ echo $message; } ?></p>
+ 		<form action="register.php" method='POST'>
+			<ul>
+				<div class="row">
+					<div class="register-left col-lg-6 col-sm-12">	
+						<li>
+							<label for="ftName" ></label>
+							<input type="text" placeholder="Prénom *" id="ftName" name="ftName" required>
+						</li>
+						<li>
+							<label for="ltName" ></label>
+							<input type="text" placeholder="Nom *" id="ltName" name="ltName" require>
+						</li>
+						<li>
+							<label for="password" ></label>
+							<input type="password" placeholder="Mot de passe *" id="password" name="password" required>
+						</li>
+						<li>
+							<label for="email" ></label>
+							<input type="email" placeholder="E-mail *" id="email" name="email" required>
+						</li>
+						<li>
+							<label for="address" ></label>
+							<input type="text" placeholder="Adresse *" id="address" name="address" required>
+						</li>
+					</div>
+					<div class="register-right col-lg-6 col-sm-12">
+						<li>
+							<label for="city" ></label>
+							<input type="text" placeholder="Ville *" id="city" name="city" required>
+						</li>
+						<li>
+							<label for="postalCode" ></label>
+							<input type="text" placeholder="Code Postal *" id="postalCode" name="postalCode" required>
+						</li>
+						<li>
+							<label for="country" ></label>
+							<input type="text" placeholder="Pays *" id="country" name="country" required>
+						</li>
+						<li>
+							<label for="phoneNumber" ></label>
+							<input type="text" placeholder="Numéro de téléphone *" id="phoneNumber" name="phoneNumber" required>
+						</li>
+						<li>
+							<label for="birthday" ></label>
+							<input type="text" placeholder="Date de naissance *" id="birthday" name="birthday" onfocus="(this.type='date')" required>
+						</li>
+					</div>
+				</div>
+				<ul>
+					<li>
+						<input class='send' type="submit" name="send" id='send' value='ENVOYER'>
+					</li>
+				</ul>
+			</ul>
+		</form>
+</div>
