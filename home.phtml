@@ -6,7 +6,7 @@
 	    </div>
 	    <?php foreach ($destinations as $destination): ?>
 		<div class='slider'>
-			<img src="img/<?= htmlspecialchars($destination['slider']) ?>">
+			<img src="frontend/img/<?= htmlspecialchars($destination['slider']) ?>">
 		</div>
 		<?php endforeach ?>
 	</section>
@@ -18,7 +18,7 @@
 			<?php foreach ($categories as $category): ?>
 				<div class="col-lg-3 col-sm-6">
 					<section>
-						<img src="img/<?= htmlspecialchars($category['picture']) ?>" alt="img">
+						<img src="frontend/img/<?= htmlspecialchars($category['picture']) ?>" alt="img">
 						<a href="category.php?id=<?= htmlspecialchars($category['ID']) ?>"><h2>- <?= htmlspecialchars($category['title']) ?> -</h2></a>
 						
 					</section>
