@@ -2,7 +2,7 @@
 
 function getPersons() {
     var nbPersons = $('select').val();
-    console.log(nbPersons);
+   /* console.log(nbPersons);*/
 }
 
 function loadDetails(){
@@ -37,10 +37,10 @@ function getDetails(event){
     var nbPersons = parseInt($('select').val());
     var ID =  $('input[name="destinationID"]').val();
 
-    console.log(destination);
+   /* console.log(destination);
     console.log(period);
     console.log(nbPersons);
-    console.log(ID);
+    console.log(ID);*/
 
     var order = loadDetails();
 
@@ -53,7 +53,7 @@ function getDetails(event){
      
     };
 
-    console.log(orderDetails);
+    /*console.log(orderDetails);*/
 
     // changer le nombre des personnes participantes lorsque l'utilisateur change d'avis avant de confirmer la participation
 
@@ -74,7 +74,7 @@ function getDetails(event){
         var index = $('.join').data('nbPersons');
     }
 
-    console.log(order);
+    /*console.log(order);*/
 
     localStorage.setItem('destination', JSON.stringify(order));
     refreshDetails();
@@ -99,7 +99,7 @@ function deleteItem(event)
     event.preventDefault(); // empêche le navigateur de déclencher son comportement par défaut
     var order = loadDetails(); // pour que le tableau order soit reconnu 
 
-    console.log($(this).data('index')); 
+    /*console.log($(this).data('index'));*/ 
 
     order.splice($(this).data('index'), 1);  //.splice supprime une ligne du tableau, 1  - le numero des lignes, this - le bouton,  data('index') - le numero 
     localStorage.setItem('destination', JSON.stringify(order));
